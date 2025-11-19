@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="homens.css">
+    <link rel="icon" href="image.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <span class="logo-inco">
+                <img src="C:\Users\User\Desktop\Frontend\Сайт для г.Реж 2\главная страница\image.png" alt="" width="20px" height="30px">
+            </span>
+            <div class="flex">
+                <samp class="logog">г.РЕЖ</samp>
+                <p class="obl">Свердловская область</p>
+            </div>
+        </div>
+        <!--Слова навигаций на главной странице-->
+        <nav class="nuv-menu">
+            <ul>
+                <a href="main.html">Наш город</a>
+                <a href="home.html">Справочник города</a>
+                <a href="index.html">Актуально</a>
+                <a href="#">Жителям</a>
+                <a href="#" class="btnq">Сервисы</a>
+                <span id="clock" class="clockk"></span> 
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<section class="hero">
+    <div class="containerr">
+        <div class="hero-content fade-in-up">
+            <h1>Жителям Режа</h1>
+            <p>Все городские услуги в одном месте. Быстро и удобно.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <button class="btnt btnt-secondary" onclick="showModal('services-modal')">
+                    <i class="fas fa-concierge-bell"></i>Услуги онлайн
+                </button>
+                <button class="btnt btnt-accent" onclick="showModal('document-modal')">
+                    <i class="fas fa-file-alt"></i>Документы и справки
+                </button>
+                <button class="btnt btnt-outline" onclick="showModal('problems-modal')">
+                    <i class="fas fa-tools"></i>Сообщить о проблеме
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Быстрые сервисы -->
+<section class="quick-services">
+    <div class="containertry">
+        <h2 class="section-title">Быстрые сервисы</h2>
+        <div class="services-grid">
+            <div class="service-card" onclick="showNotification('Переход к оплате ЖКХ')">
+                <div class="service-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Оплата ЖКХ</h3>
+                <p>Оплатите коммунальные услуги онлайн</p>
+                <button class="btntr">Оплатить</button>
+            </div>
+
+            <div class="service-card" onclick="showNotification('Проверка штрафов')">
+                <div class="service-icon">
+                    <i class="fas fa-car"></i>
+                </div>
+                <h3>Штрафы ГИБДД</h3>
+                <p>Проверьте и оплатите штрафы за нарушение ПДД</p>
+                <button class="btntr">Проверить</button>
+            </div>
+
+            <div class="service-card" onclick="showNotification('Запись к врачу')">
+                <div class="service-icon">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <h3>Запись к врачу</h3>
+                <p>Запишитесь на прием в поликлинику онлайн</p>
+                <button class="btntr">Записаться</button>
+            </div>
+
+            <div class="service-card" onclick="showModal('kindergarten-modal')">
+                <div class="service-icon">
+                    <i class="fas fa-child"></i>
+                </div>
+                <h3>Детский сад</h3>
+                <p>Запись в детский сад и проверка очереди</p>
+                <button class="btntr">Подать заявку</button>
+            </div>
+
+            <div class="service-card" onclick="showModal('transport-modal')">
+                <div class="service-icon">
+                    <i class="fas fa-bus"></i>
+                </div>
+                <h3>Общественный транспорт</h3>
+                <p>Расписание и маршруты городского транспорта</p>
+                <button class="btntr">Посмотреть</button>
+            </div>
+
+            <div class="service-card" onclick="showModal('culture-modal')">
+                <div class="service-icon">
+                    <i class="fas fa-theater-masks"></i>
+                </div>
+                <h3>Культура и досуг</h3>
+                <p>Афиша мероприятий и запись в кружки</p>
+                <button class="btntr">Узнать больше</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Основной контент -->
+<div class="container">
+    <div class="main-content">
+        <div class="content-grid">
+            <!-- Основная колонка -->
+            <main>
+                <!-- Аварийные службы -->
+                <div class="emergency-services">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Аварийные службы</h3>
+                    <div class="emergency-numbers">
+                        <div class="emergency-number">
+                            <h4>Единая служба спасения</h4>
+                            <div class="phone-number">112</div>
+                        </div>
+                        <div class="emergency-number">
+                            <h4>Пожарная охрана</h4>
+                            <div class="phone-number">101</div>
+                        </div>
+                        <div class="emergency-number">
+                            <h4>Полиция</h4>
+                            <div class="phone-number">102</div>
+                        </div>
+                        <div class="emergency-number">
+                            <h4>Скорая помощь</h4>
+                            <div class="phone-number">103</div>
+                        </div>
+                        <div class="emergency-number">
+                            <h4>Аварийная газовая служба</h4>
+                            <div class="phone-number">104</div>
+                        </div>
+                        <div class="emergency-number">
+                            <h4>Аварийная ЖКХ</h4>
+                            <div class="phone-number">+7 (34364) 2-15-01</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Полезная информация -->
+                <h2 class="section-title">Полезная информация</h2>
+
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-category">Адреса и телефоны</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Важные городские службы</h3>
+                        <p>Контакты администрации, социальных служб и экстренных служб города Реж.</p>
+                        <button class="btn" onclick="showModal('contacts-modal')">
+                            <i class="fas fa-phone"></i>Посмотреть контакты
+                        </button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-category">Образование</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Школы и детские сады</h3>
+                        <p>Информация о зачислении, учебном процессе и дополнительном образовании в Реже.</p>
+                        <button class="btn" onclick="showModal('education-modal')">
+                            <i class="fas fa-graduation-cap"></i>Подробнее
+                        </button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <span class="card-category">Здравоохранение</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Медицинские учреждения</h3>
+                        <p>Поликлиники, больницы, аптеки и график работы медицинских служб города.</p>
+                        <button class="btn" onclick="showModal('medicine-modal')">
+                            <i class="fas fa-hospital"></i>Узнать больше
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Форма обратной связи -->
+                <div class="contact-form">
+                    <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Обратная связь</h3>
+                    <form id="feedback-form">
+                        <div class="form-group">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Категория обращения</label>
+                            <select id="category" class="form-control" required>
+                                <option value="">Выберите категорию</option>
+                                <option value="problem">Сообщение о проблеме</option>
+                                <option value="suggestion">Предложение</option>
+                                <option value="question">Вопрос</option>
+                                <option value="thanks">Благодарность</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i>Отправить сообщение
+                        </button>
+                    </form>
+                </div>
+            </main>
+
+            <!-- Боковая панель -->
+            <aside>
+                    <!-- Погода -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title"><i class="fas fa-cloud-sun"></i> Погода в Реже</h3>
+                        <div id="weather-widget" style="text-align: center; padding: 1rem;">
+                            <div style="font-size: 2rem; color: var(--accent); margin-bottom: 0.5rem;">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                            <div style="font-size: 1.5rem; font-weight: bold; color: var(--primary);">
+                                +5°C
+                            </div>
+                            <div style="color: var(--gray); margin-top: 0.5rem;">
+                                Ясно, ощущается как +3°C
+                            </div>
+                            <button class="btn btn-outline" style="margin-top: 1rem; width: 100%;" onclick="updateWeather()">
+                                <i class="fas fa-sync-alt"></i>Обновить
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Курсы валют -->
+                    <div class="sidebar-widget">
+            <h2 class="widget-title">
+                <i class="fas fa-chart-line"></i>
+                Курсы валют
+            </h2>
+            
+            <div class="currency-header">
+                <div class="last-update">
+                    <i class="fas fa-clock"></i>
+                    <span id="last-update-text">Обновляется...</span>
+                </div>
+                <div class="change-indicator">
+                    <i class="fas fa-sync-alt pulse" style="color: var(--accent);"></i>
+                    <span>LIVE</span>
+                </div>
+            </div>
+
+            <div class="currency-list" id="currency-list">
+                <!-- Курсы валют будут загружены через JavaScript -->
+                <div class="currency-item">
+                    <div class="currency-info">
+                        <div style="width: 32px; height: 32px; background: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-spinner loading-spinner"></i>
+                        </div>
+                        <div>
+                            <div class="currency-name">Загрузка...</div>
+                            <div class="currency-code">---</div>
+                        </div>
+                    </div>
+                    <div class="currency-rate">
+                        <div class="rate-value">--.-- ₽</div>
+                        <div class="rate-change neutral">
+                            <i class="fas fa-minus"></i>
+                            <span>--.--%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="currency-changes">
+                <div class="change-indicator">
+                    <i class="fas fa-arrow-up" style="color: var(--success);"></i>
+                    <span>Растет</span>
+                </div>
+                <div class="change-indicator">
+                    <i class="fas fa-arrow-down" style="color: var(--danger);"></i>
+                    <span>Падает</span>
+                </div>
+            </div>
+
+            <div class="auto-update">
+                <label class="switch">
+                    <input type="checkbox" id="auto-update" checked>
+                    <span class="slider"></span>
+                </label>
+                <span>Автообновление (60 сек)</span>
+            </div>
+
+            <button class="refresh-btn " id="refresh-rates">
+                <i class="fas fa-sync-alt"></i>
+                Обновить курсы
+            </button>
+        </div>
+
+        <!-- Уведомление -->
+        <div id="notification" class="notification">
+            <span id="notification-text">Курсы валют обновлены</span>
+        </div>
+
+                    <!-- Новости -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title"><i class="fas fa-newspaper"></i> Последние новости</h3>
+                        <div class="news-list">
+                            <div style="padding: 0.8rem 0; border-bottom: 1px solid #eee;">
+                                <div style="font-weight: 600; color: var(--primary);">Открытие нового сквера</div>
+                                <div style="font-size: 0.9rem; color: var(--gray); margin-top: 0.3rem;">25 октября 2023</div>
+                            </div>
+                            <div style="padding: 0.8rem 0; border-bottom: 1px solid #eee;">
+                                <div style="font-weight: 600; color: var(--primary);">Ремонт дорог на ул. Советской</div>
+                                <div style="font-size: 0.9rem; color: var(--gray); margin-top: 0.3rem;">24 октября 2023</div>
+                            </div>
+                            <div style="padding: 0.8rem 0;">
+                                <div style="font-weight: 600; color: var(--primary);">Фестиваль "Режевская осень"</div>
+                                <div style="font-size: 0.9rem; color: var(--gray); margin-top: 0.3rem;">23 октября 2023</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline" style="width: 100%; margin-top: 1rem;">
+                            <i class="fas fa-plus"></i>Все новости
+                        </button>
+                    </div>
+            </aside>
+        </div>
+    </div>
+</div>
+
+<!-- Модальные окна -->
+<div id="services-modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('services-modal')">&times;</button>
+        <h2 style="color: var(--primary); margin-bottom: 1.5rem;">Услуги онлайн</h2>
+        <p>Выберите нужную услугу из списка:</p>
+        <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;">
+            <button class="btn" onclick="showNotification('Переход к оплате ЖКХ')">Оплата ЖКХ</button>
+            <button class="btn" onclick="showNotification('Подача заявления')">Получение справок</button>
+            <button class="btn" onclick="showNotification('Запись на прием')">Запись в учреждения</button>
+            <button class="btn" onclick="showNotification('Проверка документов')">Проверка статуса заявления</button>
+        </div>
+    </div>
+</div>
+
+<div id="documents-modal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('documents-modal')">&times;</button>
+        <h2 style="color: var(--primary); margin-bottom: 1.5rem;">Документы и справки</h2>
+        <p>Получение документов и справок в электронном виде:</p>
+        <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;">
+            <button class="btn" onclick="showNotification('Заказ справки о составе семьи')">Справка о составе семьи</button>
+            <button class="btn" onclick="showNotification('Заказ выписки из домовой книги')">Выписка из домовой книги</button>
+            <button class="btn" onclick="showNotification('Заказ справки об отсутствии задолженности')">Справка об отсутствии задолженности по ЖКХ</button>
+        </div>
+    </div>
+</div>
+
+<!-- Уведомление -->
+<div id="notification" class="notification">
+    <span id="notification-text">Сообщение отправлено</span>
+</div>
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-info">
+            <h4>Город Реж</h4>
+            <p>Маленький уральский город с большой историей, славящийся своей самоцветной находкой — режевским малахитом.</p>
+        </div>
+
+        <div class="footer-info">
+            <h4>Навигация</h4>
+            <ul>
+                <li><a href="#">Наш город</a></li>
+                <li><a href="#about">Краткая информация</a></li>
+                <li><a href="#attractions">Главные достопримечательности</a></li>
+                
+            </ul>
+        </div>
+
+        <div class="footer-info">
+            <h4>Контакты</h4>
+            <ul class="contact-info">
+                <li><a href="#">Свердловская обл., г.Реж</a></li>
+                <li><a href="#">+7 (XXX) XXX-XX-XX</a></li>
+                <li><a href="#">Vk - </a></li>
+                <li><a href="#">Teledram - </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Портал города Реж.</p>
+    </div>
+</footer>
+
+
+
+    <script src="js.script"></script>
+</body>
+<script src="jsscript.js"></script>
+</html>

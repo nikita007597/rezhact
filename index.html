@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="image.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="actual.css">
+</head>
+<body>
+    
+
+    <header class="header">
+    <div class="container">
+        <div class="logo">
+            <span class="logo-inco">
+                <img src="C:\Users\User\Desktop\Frontend\Сайт для г.Реж 2\главная страница\image.png" alt="" width="20px" height="30px">
+            </span>
+            <div class="flex">
+                <samp class="logog">г.РЕЖ</samp>
+                <p class="obl">Свердловская область</p>
+            </div>
+        </div>
+        <!--Слова навигаций на главной странице-->
+        <nav class="nuv-menu">
+            <ul>
+                <a href="main.html">Наш город</a>
+                <a href="home.html">Справочник города</a>
+                <a href="main.html">Актуально</a>
+                <a href="homens.html">Жителям</a>
+                <a href="#" class="btn">Сервисы</a>
+                <span id="clock" class="clockk"></span> 
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!--Основной контент-->
+
+    <div class="containerr">
+        <div class="main-content">
+            <!-- Основ колонка -->
+            <main>
+                <div class="content">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="Новости">Новости</button>
+                <button class="filter-btn" data-filter="Событие">События</button>
+                <button class="filter-btn" data-filter="Объявления">Объявления</button>
+                <button class="filter-btn" data-filter="Срочно">Срочно</button>
+            </div>
+            
+            <h2 class="section-title" id="news">Последние актуальные новости</h2>
+            
+            <div id="cards-container">
+                <article class="card" data-category="Новости">
+                    <div class="card-header">
+                        <span class="card-category">Новости</span>
+                        <span class="card-date">28 сентября 2024</span>
+                    </div>
+                    <div class="card-main">
+                        <h3>В Реже открылся новый парк "Талицкий"</h3>
+                        <p>В рамках программы "Комфортная городская среда" в Реже появилась новая зона отдыха.
+                             В парке установлены детская площадка, скамейки и фонари.</p>
+                        <p>Торжественное открытие состоялось при участии заместителя главы 
+                            Режевского городского округа по вопросам строительства, коммунального хозяйства,
+                             транспорта и связи и жителей города.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">Читать далее</a>
+                        <div>
+                            <i class="far fa-eye"></i>
+                            <i class="far fa-comment" style="margin-left: 15px;"></i>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="card" data-category="Срочно">
+                    <div class="card-header">
+                        <span class="card-category" style="background: #e74c3c;">Срочно</span>
+                        <span class="card-date">24 октября 2025</span>
+                    </div>
+                    <div class="card-main">
+                        <h3>Отключение горячей воды в центре города</h3>
+                        <p>С 26 по 28 октября в связи с плановыми работами будет прекращена подача горячей воды в домах по адресам: 
+                            ул. Ленина (д. 1-25), ул. Советская (д. 10-30).</p>
+                        <p>Приносим извинения за временные неудобства.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">Читать далее</a>
+                        <div>
+                            <i class="far fa-eye"></i>
+                            <i class="far fa-comment" style="margin-left: 15px;"></i>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-category="Срочно">
+                    <div class="card-header">
+                        <span class="card-category" style="background: #e74c3c;">Срочно</span>
+                        <span class="card-date">07 ноября 2025</span>
+                    </div>
+                    <div class="card-main">
+                        <h3>Отключение холодной воды </h3>
+                        <p>07 ноября  с 9-00 до окончания работы будет отключение ХВС по адресам: 
+                             Спортивная 2, 4, 6, <br> Ленина 76/1, 76/2, 76/3.</p>
+                        <p>Приносим извинения за временные неудобства.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">Читать далее</a>
+                        <div>
+                            <i class="far fa-eye"></i>
+                            <i class="far fa-comment" style="margin-left: 15px;"></i>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="card" data-category="Событие">
+                    <div class="card-header">
+                        <span class="card-category" style="background: #9b59b6;">Событие</span>
+                        <span class="card-date">23 октября 2025</span>
+                    </div>
+                    <div class="card-main">
+                        <h3>Фестиваль "Режевская осень" пройдет в следующую субботу</h3>
+                        <p>Приглашаем всех жителей и гостей города на традиционный фестиваль 
+                            "Режевская осень", который состоится 30 октября в городском парке.</p>
+                        <p>В программе: ярмарка ремесленников, концерт творческих коллективов, осенние угощения и развлечения для детей.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">Читать далее</a>
+                        <div>
+                            <i class="far fa-eye"></i>
+                            <i class="far fa-comment" style="margin-left: 15px;"></i>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="card" data-category="Событие">
+                    <div class="card-header">
+                        <span class="card-category" style="background: #9b59b6;">Событие</span>
+                        <span class="card-date">14-16 ноября 2025</span>
+                    </div>
+                    <div class="card-main">
+                        <h3>Цирк в городе Реж</h3>
+                        <p>Приглашаем всех жителей и гостей города на праграмму выступления нашего цирка.</p>
+                        <p>В программе: Каскадеры на мотоцикле в металлическом шаре, уникальный трюк, фокусы и илюзии и многое другое.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn">Читать далее</a>
+                        <div>
+                            <i class="far fa-eye"></i>
+                            <i class="far fa-comment" style="margin-left: 15px;"></i>
+                        </div>
+                    </div>
+                </article>
+
+                
+                
+                <div class="no-results" id="no-results">
+                    <p class="tut">По выбранному фильтру ничего не найдено.</p>
+                </div>
+            </div>
+        </div>
+            </main>
+                <!-- Боковая панель -->
+            <aside>
+                <!-- Ближайшие события -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">Ближайшие события</h3>
+                <ul class="event-list">
+                    <li class="event-item">
+                        <div class="event-date">30 ОКТ</div>
+                        <div class="event-title">Фестиваль "Режевская осень"</div>
+                        <div class="event-desc">Городской парк, 12:00</div>
+                    </li>
+                    <li class="event-item">
+                        <div class="event-date">2 НОЯ</div>
+                        <div class="event-title">День народного единства</div>
+                        <div class="event-desc">Площадь у ДК, 10:00</div>
+                    </li>
+                    <li class="event-item">
+                        <div class="event-date">5 НОЯ</div>
+                        <div class="event-title">Выставка "Режевские самоцветы"</div>
+                        <div class="event-desc">Краеведческий музей, 10:00-18:00</div>
+                    </li>
+                    <li class="event-item">
+                        <div class="event-date">12 НОЯ</div>
+                        <div class="event-title">Мастер-класс по гончарному делу</div>
+                        <div class="event-desc">Центр ремесел, 15:00</div>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-outline" style=" margin-top: 1rem;">Все события</a>
+            </div>
+                 <!-- Календарь -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">Календарь событий</h3>
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <button class="calendar-nav-btn" id="prevMonth">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <div class="calendar-title" id="currentMonthYear">Октябрь 2023</div>
+                            <button class="calendar-nav-btn" id="nextMonth">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="calendar" id="calendar">
+                            <!-- Дни недели -->
+                            <div class="calendar-weekday">Пн</div>
+                            <div class="calendar-weekday">Вт</div>
+                            <div class="calendar-weekday">Ср</div>
+                            <div class="calendar-weekday">Чт</div>
+                            <div class="calendar-weekday">Пт</div>
+                            <div class="calendar-weekday">Сб</div>
+                            <div class="calendar-weekday">Вс</div>
+                            <!-- Дни будут добавлены через JavaScript -->
+                        </div>
+                        <div class="calendar-events" id="calendarEvents">
+                            <div class="calendar-event-item">
+                                <span class="event-date-badge"></span>
+                                
+                            </div>
+                            <div class="calendar-event-item">
+                                <span class="event-date-badge"></span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </aside>
+        </div>
+    </div>
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-info">
+            <h4>Город Реж</h4>
+            <p>Маленький уральский город с большой историей, славящийся своей самоцветной находкой — режевским малахитом.</p>
+        </div>
+
+        <div class="footer-info">
+            <h4>Навигация</h4>
+            <ul>
+                <li><a href="#">Наш город</a></li>
+                <li><a href="#about">Краткая информация</a></li>
+                <li><a href="#attractions">Главные достопримечательности</a></li>
+                
+            </ul>
+        </div>
+
+        <div class="footer-info">
+            <h4>Контакты</h4>
+            <ul class="contact-info">
+                <li><a href="#">Свердловская обл., г.Реж</a></li>
+                <li><a href="#">+7 (XXX) XXX-XX-XX</a></li>
+                <li><a href="#">Vk - </a></li>
+                <li><a href="#">Teledram - </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Портал города Реж.</p>
+    </div>
+</footer>
+
+
+
+    <script src="js.script"></script>
+</body>
+<script src="js.js"></script>
+</html>

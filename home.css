@@ -1,0 +1,391 @@
+body {
+    font-family: Arial;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(90deg,rgb(223, 223, 223) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+
+a {
+    text-decoration: none;
+}
+
+/* шапка */
+
+
+.header { 
+    background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(94, 188, 255, 1) 100%);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: -10px;
+    z-index: 1000;
+}
+
+
+
+
+.container {
+    display: flex;
+    width: 1100px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+/*Кнопки меню*/
+
+.container nav ul {
+    display: flex;
+    gap: 0px;
+    
+    
+}
+
+.container nav ul a {
+    list-style: none;
+    background: rgb(232, 232, 232);
+    padding: 10px 15px;
+    color: black;
+    
+}
+
+.container nav ul a:hover {
+    background: rgb(32, 101, 157);
+    transition: all 800ms ease;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    color: white;
+    
+   
+}
+
+
+.container nav ul .btn {
+    color: white;
+    background: rgb(35, 112, 175);
+    padding: 10px 10px;
+    border-radius: 5px;
+    transition: all 600ms ease;
+    margin-left: 10px;
+    
+}
+
+.container nav ul .btn:hover {
+    background: rgb(17, 65, 104);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    
+}
+
+.logog {
+    margin-left: 10px;
+}
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    translate: 0 16px;  
+}
+
+.obl {
+    translate: 0 -10px;
+}
+
+.logo p {
+    font-size: 12px;
+}
+
+/*Часы*/
+.clockk {
+    font-family: Arial; 
+    font-size: 16px; 
+    color: #333; 
+    padding: 10px;
+    border-bottom: 2px solid black;
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+
+/*справочник*/
+
+
+
+.title-name {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #000000;
+    position: relative;
+    text-shadow: 20px 15px 20px rgb(111, 111, 111)
+}
+/*Нижня черта загаловка*/
+/*
+.title-name::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 4px;
+    background: #000000;
+    margin: 15px auto;
+    border-radius: 2px;
+}
+*/
+
+/*---------------------------*/
+
+
+
+.handbook-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    padding: 20px;
+    background: linear-gradient(135deg, #e6eff9 0%, #8ec2f6 100%);
+    margin: 0;
+    font-size: 20px;
+    border-bottom: 4px solid #0905e1;
+}
+
+.containerr {
+    border-bottom: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.containerr:hover {
+    background-color: #f8f9fa;
+}
+
+
+.name-tit {
+    background-color: #fff;
+    padding: 20px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3 ease;
+}
+
+
+.name-tit:hover {
+    background-color: #f1f3f4;
+}
+
+
+.name-tit h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.name-tit h2 i {
+    color: #3005f0;
+    font-size: 18px;
+    width: 25px;
+    text-align: center;
+}
+
+
+.name-tit .icon-gl {
+    color: #3498db;
+    font-size: 18px;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+.info {
+    max-height: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.containerr.active {
+    background-color: #e3f2fd;
+    border-left: 4px solid #3498db;
+}
+
+.containerr.active .name-tit {
+    background-color: #e3f2fd;
+}
+
+
+.containerr.active .icon-gl {
+    transform: rotate(180deg);
+    color: #e74c3c;
+}
+
+
+
+
+
+.info ul {
+    list-style: none;
+    padding: 20px 25px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 12px;
+}
+
+.info li {
+    margin-bottom: 0;
+}
+
+.info a {
+    text-decoration: none;
+    color: #495057;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background-color: white;
+    border: 1px solid #e9ecef;
+}
+
+.info a:hover {
+    color: #3498db;
+    background-color: #e3f2fd;
+    border-color: #3498db;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+}
+
+.info a i {
+    width: 20px;
+    text-align: center;
+    color: #8870d4;
+    font-size: 0.9em;
+}
+
+
+
+
+/*footer*/
+
+
+.main-footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%); /* Темно-синий градиент */
+    padding: 50px 0px 0px;
+    color: white;
+    font-family: Arial;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-bottom: 50px;
+}
+
+.footer-info {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 30px;
+    padding: 0 15px;
+}
+
+.footer-info h4 {
+    color: #00c3ff;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    text-shadow: 5px 10px 10px rgb(0, 0, 0)
+}
+
+
+.footer-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-info ul li {
+    margin-bottom: 10px;
+}
+
+.footer-info a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-info a:hover {
+    color: #00c3ff;
+}
+
+.footer-bottom {
+    
+    margin: 0 auto;
+    background-color: rgb(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 50px 0px;
+    
+}
+
+
+
+
+/*Адаптация*/
+
+@media (max-width: 768px) {
+    .container {
+        font-size: 14px;
+        justify-content: left;
+        padding: 0 15px;
+        
+        
+    }
+
+    .obl {
+        margin-left: -30px;
+    }
+
+    .nuv-menu {
+        margin-left: -30px;
+    }
+
+    .clockk {
+        margin-left: 2px;
+    }
+
+    .flex {
+        
+        justify-content: left;
+        
+    }
+
+
+
+    .handbook-container {
+        width: 600px;
+        
+    }
+}
+
+
+
